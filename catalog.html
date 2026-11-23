@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог участков — Земля и Свет</title>
+  <meta name="description" content="Каталог участков в коттеджных посёлках «Берёзовка», «Лесная Опушка» и «У Озера»: площадь от 6 соток, цены от 76 000 ₽ за сотку, свет, вода, дороги. Фильтр по посёлку, площади, цене и статусу.">
+  <meta property="og:title" content="Каталог участков — Земля и Свет">
+  <meta property="og:description" content="Участки ИЖС с коммуникациями в трёх посёлках Подмосковья. Честные фото и финальные цены.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Земля и Свет",
+    "description": "Каталог коттеджных посёлков Подмосковья с готовыми коммуникациями",
+    "telephone": "+7 (495) 128-40-12",
+    "address": { "@type": "PostalAddress", "addressLocality": "Москва", "streetAddress": "Волоколамское шоссе, 11 км, офис 305" },
+    "areaServed": "Подмосковье"
+  }
+  </script>
+</head>
+<body data-nav="catalog">
+
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="logo" href="index.html"><i aria-hidden="true"></i>Земля и Свет</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html" data-nav="index">Главная</a>
+      <a href="catalog.html" data-nav="catalog">Каталог</a>
+      <a href="poselok.html" data-nav="poselok">О посёлке</a>
+      <a href="terms.html" data-nav="terms">Условия покупки</a>
+      <a href="faq.html" data-nav="faq">FAQ</a>
+      <a href="news.html" data-nav="news">Новости</a>
+      <a href="contacts.html" data-nav="contacts">Контакты</a>
+    </nav>
+    <a class="btn btn--sm" href="catalog.html">Подобрать участок</a>
+  </div>
+</header>
+
+<main>
+  <section class="section section--tight" aria-label="Каталог участков">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a> / <span aria-current="page">Каталог</span>
+      </nav>
+
+      <span class="label">Каталог</span>
+      <h1>Каталог участков</h1>
+      <p class="lead">Девять участков в трёх посёлках Подмосковья. Цены финальные и фиксируются в договоре при брони — фильтруйте по площади, бюджету и статусу.</p>
+
+      <form class="filters" id="filters" action="#" method="get" style="margin-top: var(--s6)" aria-label="Фильтры каталога">
+        <div class="filters__grid">
+          <label class="field"><span>Посёлок</span>
+            <select name="village" id="f-village">
+              <option value="">Все посёлки</option>
+            </select>
+          </label>
+          <label class="field"><span>Площадь от, сотки</span>
+            <input type="number" name="area_from" id="f-area-from" min="0" step="0.5" inputmode="decimal" placeholder="6">
+          </label>
+          <label class="field"><span>Площадь до, сотки</span>
+            <input type="number" name="area_to" id="f-area-to" min="0" step="0.5" inputmode="decimal" placeholder="15">
+          </label>
+          <label class="field"><span>Цена от, ₽</span>
+            <input type="number" name="price_from" id="f-price-from" min="0" step="10000" inputmode="numeric" placeholder="500 000">
+          </label>
+          <label class="field"><span>Цена до, ₽</span>
+            <input type="number" name="price_to" id="f-price-to" min="0" step="10000" inputmode="numeric" placeholder="1 200 000">
+          </label>
+          <label class="field"><span>Статус</span>
+            <select name="status" id="f-status">
+              <option value="">Любой статус</option>
+              <option value="Свободен">Свободен</option>
+            </select>
+          </label>
+        </div>
+        <div class="filters__result">
+          <button class="btn btn--sm" type="submit">Применить</button>
+          <button class="btn btn--ghost btn--sm" type="reset" id="f-reset">Сбросить</button>
+          <span id="f-count" role="status"></span>
+        </div>
+      </form>
+
+      <div class="cards" id="lot-cards"></div>
+      <p class="notice" id="lot-empty" hidden>По выбранным фильтрам участков нет. Попробуйте расширить диапазон площади или цены — или позвоните, подберём вариант вручную.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>Земля и Свет</h4>
+        <p class="muted">Каталог коттеджных посёлков Подмосковья с честными фото, готовыми коммуникациями и финальной ценой в договоре.</p>
+        <a class="btn btn--ghost btn--sm" href="tel:+74951284012">+7 (495) 128-40-12</a>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="catalog.html">Каталог участков</a></li>
+          <li><a href="poselok.html">О посёлке</a></li>
+          <li><a href="terms.html">Условия покупки</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">Новости и акции</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Посёлки">
+        <h4>Посёлки</h4>
+        <ul>
+          <li><a href="catalog.html?village=berezovka">Берёзовка · от 89 000 ₽/сотка</a></li>
+          <li><a href="catalog.html?village=lesnaya">Лесная Опушка · от 97 000 ₽/сотка</a></li>
+          <li><a href="catalog.html?village=ozero">У Озера · от 76 000 ₽/сотка</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__foot">
+      <span>Земля и Свет · коттеджные посёлки · Подмосковье</span>
+      <span>ООО «Земля и Свет» · ИНН 7729456123 · <a href="#politika">Политика обработки персональных данных</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

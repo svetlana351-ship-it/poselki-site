@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Земля и Свет — коттеджные посёлки в Подмосковье с коммуникациями, участки от 89 000 ₽/сотка</title>
+  <meta name="description" content="Каталог коттеджных посёлков Подмосковья: Берёзовка, Лесная Опушка, У Озера. Участки ИЖС с готовыми коммуникациями от 89 000 ₽ за сотку. Цена финальная, фиксируется в договоре.">
+  <meta property="og:title" content="Земля и Свет — коттеджные посёлки в Подмосковье без сюрпризов">
+  <meta property="og:description" content="Участки ИЖС с коммуникациями от 89 000 ₽/сотка. Дороги, свет, документы — показываем работающее, а не обещанное.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    /* главная: все тексты строго влево */
+    main h1, main h2, main h3, main h4, main p, main li, main dd, main dt,
+    main blockquote, main figcaption, main .label, main .field, main .btn, main td, main th { text-align: left; }
+    /* колонка на всю ширину экрана: контент начинается от левого края */
+    main .wrap, .site-header .wrap, .site-footer .wrap { width: calc(100% - 2 * var(--gutter)); }
+    main h2, main .section > .wrap > .label { margin-left: 0; }
+    /* преимущества: 3 колонки × 2 ряда */
+    main .pros { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 900px) { main .pros { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { main .pros { grid-template-columns: 1fr; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Земля и Свет",
+    "description": "Каталог коттеджных посёлков Подмосковья с готовыми коммуникациями",
+    "telephone": "+7 (495) 128-40-12",
+    "address": { "@type": "PostalAddress", "addressLocality": "Москва", "streetAddress": "Волоколамское шоссе, 11 км, офис 305" },
+    "areaServed": "Подмосковье"
+  }
+  </script>
+</head>
+<body data-nav="index">
+
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="logo" href="index.html"><i aria-hidden="true"></i>Земля и Свет</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html" data-nav="index">Главная</a>
+      <a href="catalog.html" data-nav="catalog">Каталог</a>
+      <a href="poselok.html" data-nav="poselok">О посёлке</a>
+      <a href="terms.html" data-nav="terms">Условия покупки</a>
+      <a href="faq.html" data-nav="faq">FAQ</a>
+      <a href="news.html" data-nav="news">Новости</a>
+      <a href="contacts.html" data-nav="contacts">Контакты</a>
+    </nav>
+    <a class="btn btn--sm" href="catalog.html">Подобрать участок</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-label="Коттеджные посёлки в Подмосковье">
+    <div class="hero__img">
+      <img src="assets/cover.webp" alt="Улица коттеджного посёлка: дома, заборы, фонари, чистая дорога" fetchpriority="high">
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="wrap hero__body">
+      <p class="demo-for"><img src="assets/zakazchik.jpg" alt="">Демо для turidei · по заказу «Сайт о коттеджных поселках»</p>
+      <span class="label">Коттеджные посёлки · Подмосковье</span>
+      <h1>Коттеджные посёлки в Подмосковье – без сюрпризов</h1>
+      <p class="lead">Показываем посёлок как он есть: дороги, освещение, выделенная мощность, вода и документы на землю. <b>Цена участка финальная</b>, содержание посёлка прописано до сделки.</p>
+      <div class="hero__cta">
+        <a class="btn" href="catalog.html">Подобрать участок</a>
+        <a class="btn btn--ghost" href="poselok.html">Смотреть посёлки</a>
+      </div>
+      <p class="hero__price">Участки от <b>89 000 ₽</b> за сотку с коммуникациями. <span>Цена финальная, фиксируется при брони.</span></p>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="section" aria-label="Преимущества">
+    <div class="wrap">
+      <span class="label">Почему мы</span>
+      <h2>Показываем работающее, а не обещанное</h2>
+      <div class="pros" style="margin-top: var(--s6)">
+        <div class="pros__item">
+          <div class="pros__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-5"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Документы до сделки</h3>
+          <p>Межевание, техусловия и правила посёлка показываем до брони, а не «оформим потом».</p>
+        </div>
+        <div class="pros__item">
+          <div class="pros__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
+          <h3>Коммуникации на участке</h3>
+          <p>Свет, вода и дороги заведены до продажи. Проверяете на просмотре, а не по рендеру.</p>
+        </div>
+        <div class="pros__item">
+          <div class="pros__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5M7 21h10"/></svg></div>
+          <h3>Финальная цена</h3>
+          <p>Цена фиксируется в договоре при брони и не меняется. Что не входит — отдельным списком.</p>
+        </div>
+        <div class="pros__item">
+          <div class="pros__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Просмотр в день обращения</h3>
+          <p>Выезд на участок бесплатно. Приезжаете сами — или проводим видеообход с участка.</p>
+        </div>
+        <div class="pros__item">
+          <div class="pros__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+          <h3>ИЖС и прописка</h3>
+          <p>Земля под индивидуальное жилищное строительство. Прописка — сразу после постройки.</p>
+        </div>
+        <div class="pros__item">
+          <div class="pros__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 8a5 5 0 10-10 0c0 5-2 6-2 6h14s-2-1-2-6M10 20a2 2 0 004 0"/></svg></div>
+          <h3>Честно про воду</h3>
+          <p>По каждому посёлку пишем источник воды: центральная или скважина. Показываем на месте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ ПОСЁЛКОВ -->
+  <section class="section section--surface" aria-label="Посёлки в продаже">
+    <div class="wrap">
+      <span class="label">В продаже</span>
+      <h2>Три посёлка с готовыми коммуникациями</h2>
+      <p class="muted">Карточки с честными фото: коммуникации, дороги, документы и цены. Без рендеров и «примерно».</p>
+      <div class="cards" id="village-cards" style="margin-top: var(--s5)"></div>
+    </div>
+  </section>
+
+  <!-- КАК ПОКУПАЕМ -->
+  <section class="section" aria-label="Как проходит покупка">
+    <div class="wrap two-col">
+      <div>
+        <span class="label">Пять шагов</span>
+        <h2>Как проходит покупка</h2>
+        <ol class="steps" style="margin-top: var(--s5)">
+          <li><div><h3>Заявка или звонок</h3><p>Перезвоним в рабочий день, уточним бюджет, направление от города и что важно: лес, вода, готовый дом.</p></div></li>
+          <li><div><h3>Подборка участков</h3><p>3–5 вариантов с честными фото, ценами и статусом коммуникаций. За рабочий день после звонка.</p></div></li>
+          <li><div><h3>Просмотр</h3><p>Приезжаете сами или проводим видеообход с участка: границы, дороги, свет, соседи. Выезд бесплатно, в день обращения.</p></div></li>
+          <li><div><h3>Бронь и договор</h3><p>Бронируем участок на 14 дней, фиксируем цену в договоре купли-продажи. Расчёт через аккредитив.</p></div></li>
+          <li><div><h3>Сделка</h3><p>Подписываем договор, регистрируем переход права и передаём участок с документами: границы, техусловия, правила посёлка.</p></div></li>
+        </ol>
+      </div>
+      <figure class="figure">
+        <img src="assets/house.webp" alt="Улица посёлка с домами: заборы, фонари, подъезд" loading="lazy">
+        <figcaption>Один из посёлков каталога. Дороги и освещение смотрите при просмотре — они работают уже сейчас.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="section section--surface" aria-label="Отзывы покупателей">
+    <div class="wrap">
+      <div class="reviews__rating">
+        <span class="reviews__num">4,9</span>
+        <span class="stars" role="img" aria-label="Оценка 4,9 из 5"></span>
+        <span class="muted">31 отзыв на Яндекс Картах</span>
+      </div>
+      <span class="label">Отзывы</span>
+      <h2>Что говорят соседи по посёлку</h2>
+      <div class="reviews" id="review-list" style="margin-top: var(--s5)"></div>
+      <p class="muted" style="margin-top: var(--s5); font-size: var(--t-xs)">Отзывы в демо приведены как образец наполнения раздела. Перед публикацией сайта замените их на реальные отзывы клиентов компании.</p>
+    </div>
+  </section>
+
+  <!-- КОНТАКТ + ФОРМА -->
+  <section class="section" id="zayavka" aria-label="Оставить заявку">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="label">Контакты</span>
+        <h2>Подберём посёлок под ваш запрос</h2>
+        <p>Напишите бюджет и направление от города. Пришлём подборку посёлков за рабочий день: цены, фото, дата просмотра.</p>
+        <dl class="contact-list" style="margin-top: var(--s5)">
+          <div><dt>Телефон</dt><dd><a href="tel:+74951284012">+7 (495) 128-40-12</a></dd></div>
+          <div><dt>Офис</dt><dd>Волоколамское шоссе, 11 км, офис 305, Москва</dd></div>
+          <div><dt>Мессенджеры</dt><dd><a href="https://t.me/zemlya_i_svet" rel="noopener">Telegram</a> · <a href="https://wa.me/74951284012" rel="noopener">WhatsApp</a> · <a href="https://max.ru/zemlya_i_svet" rel="noopener">MAX</a></dd></div>
+        </dl>
+      </div>
+      <form class="form" data-demo-form action="#" method="post" aria-label="Форма заявки">
+        <div class="form__fields" style="display: grid; gap: var(--s4)">
+          <div class="form__row">
+            <label class="field"><span>Ваше имя</span><input type="text" name="name" required autocomplete="name"></label>
+            <label class="field"><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" placeholder="+7 ___ ___-__-__"></label>
+          </div>
+          <div class="form__row">
+            <label class="field"><span>Бюджет, ₽</span>
+              <select name="budget">
+                <option>до 600 000</option>
+                <option>600 000 – 900 000</option>
+                <option>900 000 – 1 500 000</option>
+                <option>с домом, от 8 000 000</option>
+              </select>
+            </label>
+            <label class="field"><span>Направление от города</span>
+              <select name="dir">
+                <option>Неважно</option>
+                <option>Новорижское шоссе</option>
+                <option>Калужское шоссе</option>
+                <option>Минское шоссе</option>
+              </select>
+            </label>
+          </div>
+          <label class="field"><span>Комментарий</span><textarea name="msg" rows="3" placeholder="Что важно: лес, вода, готовый дом…"></textarea></label>
+          <button class="btn" type="submit">Подобрать участок</button>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="#politika">политикой обработки персональных данных</a>. В демо форма не отправляет данные.</p>
+        </div>
+        <p class="form__ok" role="status">Заявка принята. В рабочий день перезвоним, уточним запрос и пришлём подборку посёлков с ценами и датой просмотра.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>Земля и Свет</h4>
+        <p class="muted">Каталог коттеджных посёлков Подмосковья с честными фото, готовыми коммуникациями и финальной ценой в договоре.</p>
+        <a class="btn btn--ghost btn--sm" href="tel:+74951284012">+7 (495) 128-40-12</a>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="catalog.html">Каталог участков</a></li>
+          <li><a href="poselok.html">О посёлке</a></li>
+          <li><a href="terms.html">Условия покупки</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">Новости и акции</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Посёлки">
+        <h4>Посёлки</h4>
+        <ul>
+          <li><a href="catalog.html?village=berezovka">Берёзовка · от 89 000 ₽/сотка</a></li>
+          <li><a href="catalog.html?village=lesnaya">Лесная Опушка · от 97 000 ₽/сотка</a></li>
+          <li><a href="catalog.html?village=ozero">У Озера · от 76 000 ₽/сотка</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__foot">
+      <span>Земля и Свет · коттеджные посёлки · Подмосковье</span>
+      <span>ООО «Земля и Свет» · ИНН 7729456123 · <a href="#politika">Политика обработки персональных данных</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script>
+  // карточки посёлков и отзывы рендерятся из единых данных
+  (function () {
+    var fmt = function (n) { return n.toLocaleString("ru-RU"); };
+    document.getElementById("village-cards").innerHTML = window.SITE.villages.map(function (v) {
+      return '<article class="card">' +
+        '<div class="card__img"><img src="' + v.img + '" alt="Посёлок «' + v.name + '», ' + v.dir + '" loading="lazy"></div>' +
+        '<div class="card__body">' +
+        '<h3 class="card__title">«' + v.name + '»</h3>' +
+        '<p class="card__meta">' + v.dir + ' · ' + v.lots + ' участков в продаже</p>' +
+        '<p class="card__meta">' + v.comm + '</p>' +
+        '<p class="card__price">от <b>' + fmt(v.priceFrom) + ' ₽</b> за сотку</p>' +
+        '<a class="btn btn--ghost btn--sm" href="catalog.html?village=' + v.id + '">Смотреть участки</a>' +
+        '</div></article>';
+    }).join("");
+
+    document.getElementById("review-list").innerHTML = window.SITE.reviews.map(function (r) {
+      return '<figure class="reviews__item' + (r.big ? ' reviews__item--big' : '') + '">' +
+        '<blockquote>' + r.text + '</blockquote>' +
+        '<figcaption><b>' + r.name + '</b> · ' + r.where + ' · ' + r.when + '</figcaption></figure>';
+    }).join("");
+  })();
+</script>
+<script src="js/site.js"></script>
+</body>
+</html>
