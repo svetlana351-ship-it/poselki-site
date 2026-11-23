@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Участок — Земля и Свет</title>
+  <meta name="description" content="Участок в коттеджном посёлке от «Земля и Свет»: площадь, цена, коммуникации, галерея и запись на бесплатный просмотр.">
+  <meta property="og:title" content="Участок — Земля и Свет">
+  <meta property="og:description" content="Участки ИЖС с коммуникациями в посёлках Подмосковья. Финальная цена в договоре.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/site.css">
+  <script type="application/ld+json" id="lot-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Участок",
+    "description": "Участок в коттеджном посёлке от «Земля и Свет»"
+  }
+  </script>
+</head>
+<body data-nav="catalog">
+
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="logo" href="index.html"><i aria-hidden="true"></i>Земля и Свет</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html" data-nav="index">Главная</a>
+      <a href="catalog.html" data-nav="catalog">Каталог</a>
+      <a href="poselok.html" data-nav="poselok">О посёлке</a>
+      <a href="terms.html" data-nav="terms">Условия покупки</a>
+      <a href="faq.html" data-nav="faq">FAQ</a>
+      <a href="news.html" data-nav="news">Новости</a>
+      <a href="contacts.html" data-nav="contacts">Контакты</a>
+    </nav>
+    <a class="btn btn--sm" href="catalog.html">Подобрать участок</a>
+  </div>
+</header>
+
+<main>
+  <section class="section section--tight" aria-label="Карточка участка">
+    <div class="wrap">
+
+      <div id="lot-missing" hidden>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a>
+        </nav>
+        <h1>Участок не найден</h1>
+        <p class="lead">Такого участка нет в каталоге — возможно, он уже продан. Посмотрите <a href="catalog.html">все свободные участки</a> или позвоните <a href="tel:+74951284012">+7 (495) 128-40-12</a>, подберём похожий вариант.</p>
+        <p class="notice">В демо-каталоге девять участков: B-101…B-103, L-201…L-203, U-301…U-303.</p>
+      </div>
+
+      <article id="lot-found" hidden>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a> /
+          <a href="catalog.html">Каталог</a> /
+          <a href="catalog.html?village=" id="bc-village">Посёлок</a> /
+          <span aria-current="page" id="bc-lot">Участок</span>
+        </nav>
+
+        <span class="label" id="lot-label">Участок</span>
+        <h1 id="lot-title"></h1>
+        <p class="lead" id="lot-lead"></p>
+
+        <div class="gallery" id="lot-gallery" style="margin-top: var(--s6)"></div>
+
+        <div class="two-col" style="margin-top: var(--s7)">
+          <div>
+            <h2>Описание участка</h2>
+            <p id="lot-desc"></p>
+            <p class="muted" id="lot-village-desc"></p>
+          </div>
+          <div>
+            <h2>Характеристики</h2>
+            <dl class="specs" id="lot-specs" style="margin-top: var(--s4)"></dl>
+          </div>
+        </div>
+
+        <section class="section--tight" aria-label="Заявка на просмотр" style="margin-top: var(--s6)">
+          <div class="contact-grid">
+            <div>
+              <span class="label">Просмотр</span>
+              <h2>Записаться на просмотр</h2>
+              <p>Выезд на участок бесплатно, в день обращения. Приезжаете сами — или проведем видеообход с участка: границы, дороги, свет, соседи.</p>
+              <dl class="contact-list" style="margin-top: var(--s5)">
+                <div><dt>Телефон</dt><dd><a href="tel:+74951284012">+7 (495) 128-40-12</a></dd></div>
+                <div><dt>Менеджер</dt><dd id="lot-manager">Марина Соколова</dd></div>
+              </dl>
+            </div>
+            <form class="form" data-demo-form action="#" method="post" aria-label="Форма заявки на просмотр участка">
+              <div class="form__fields" style="display: grid; gap: var(--s4)">
+                <div class="form__row">
+                  <label class="field"><span>Ваше имя</span><input type="text" name="name" required autocomplete="name"></label>
+                  <label class="field"><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" placeholder="+7 ___ ___-__-__"></label>
+                </div>
+                <div class="form__row">
+                  <label class="field"><span>Дата просмотра</span><input type="date" name="date" required></label>
+                  <label class="field"><span>Комментарий</span><input type="text" name="msg" placeholder="Удобное время, вопросы…"></label>
+                </div>
+                <button class="btn" type="submit">Записаться на просмотр</button>
+                <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="#politika">политикой обработки персональных данных</a>. В демо форма не отправляет данные.</p>
+              </div>
+              <p class="form__ok" role="status" id="lot-form-ok"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section--tight" aria-label="Похожие участки" style="margin-top: var(--s6)">
+          <span class="label">Ещё в этом посёлке</span>
+          <h2>Похожие участки</h2>
+          <div class="cards" id="lot-similar" style="margin-top: var(--s5)"></div>
+        </section>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>Земля и Свет</h4>
+        <p class="muted">Каталог коттеджных посёлков Подмосковья с честными фото, готовыми коммуникациями и финальной ценой в договоре.</p>
+        <a class="btn btn--ghost btn--sm" href="tel:+74951284012">+7 (495) 128-40-12</a>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="catalog.html">Каталог участков</a></li>
+          <li><a href="poselok.html">О посёлке</a></li>
+          <li><a href="terms.html">Условия покупки</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">Новости и акции</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Посёлки">
+        <h4>Посёлки</h4>
+        <ul>
+          <li><a href="catalog.html?village=berezovka">Берёзовка · от 89 000 ₽/сотка</a></li>
+          <li><a href="catalog.html?village=lesnaya">Лесная Опушка · от 97 000 ₽/сотка</a></li>
+          <li><a href="catalog.html?village=ozero">У Озера · от 76 000 ₽/сотка</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__foot">
+      <span>Земля и Свет · коттеджные посёлки · Подмосковье</span>
+      <span>ООО «Земля и Свет» · ИНН 7729456123 · <a href="#politika">Политика обработки персональных данных</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/uchastok.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
