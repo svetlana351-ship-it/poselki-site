@@ -50,7 +50,7 @@ h2 { font-size: var(--t-xl); }
 h3 { font-size: var(--t-lg); }
 p { margin: 0 0 var(--s4); max-width: var(--measure); }
 
-.wrap { width: min(100% - 2 * var(--gutter), 76rem); margin-inline: auto; }
+.wrap { width: min(100% - 2 * var(--gutter), 76rem); margin-left: var(--gutter); margin-right: auto; }
 .section { padding-block: var(--section); }
 .section--tight { padding-block: calc(var(--section) / 2); }
 .section--surface { background: var(--surface); }
